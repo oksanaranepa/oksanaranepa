@@ -1,0 +1,43 @@
+define user provide pii
+  "my email is"
+  "мой паспорт"
+  "паспорт"
+
+define bot refuse pii
+  "Я не могу обрабатывать персональные данные. Удалите или замаскируйте их."
+
+define bot refuse toxicity
+  "Я не могу продолжить с токсичным или оскорбительным запросом."
+
+define bot refuse unsupported facts
+  "Я не могу подтвердить это по локальной базе знаний."
+
+define flow check input pii
+  $has_pii = execute detect_pii(text=$last_user_message)
+  if $has_pii
+    bot refuse pii
+    stop
+
+define flow check input toxicity
+  $is_toxic = execute detect_toxicity(text=$last_user_message)
+  if $is_toxic
+    bot refuse toxicity
+    stop
+
+define flow check output pii
+  $has_pii = execute detect_pii(text=$last_bot_message)
+  if $has_pii
+    bot refuse pii
+    stop
+
+define flow check output toxicity
+  $is_toxic = execute detect_toxicity(text=$last_bot_message)
+  if $is_toxic
+    bot refuse toxicity
+    stop
+
+define flow check factual support
+  $is_supported = execute validate_facts(text=$last_bot_message)
+  if not $is_supported
+    bot refuse unsupported facts
+    stop
