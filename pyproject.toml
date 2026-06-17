@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "bank-rag-consultant"
+version = "0.1.0"
+description = "MVP RAG system for automated answers about banking products"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "langchain-text-splitters",
+  "chromadb",
+  "sentence-transformers",
+  "openai",
+  "requests",
+]
+
+[project.optional-dependencies]
+eval = ["ragas", "datasets"]
+dev = ["pytest"]
+
+[project.scripts]
+bank-rag = "bank_rag.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/bank_rag"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
