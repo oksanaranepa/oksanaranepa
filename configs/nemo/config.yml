@@ -1,0 +1,31 @@
+models:
+  - type: main
+    engine: huggingface
+    model: distilgpt2
+
+instructions:
+  - type: general
+    content: |
+      You are a safe assistant. Refuse to process personal data, toxic prompts,
+      and unsupported factual claims.
+
+rails:
+  input:
+    flows:
+      - check input pii
+      - check input toxicity
+  output:
+    flows:
+      - check output pii
+      - check output toxicity
+      - check factual support
+
+prompts:
+  - task: self_check_input
+    content: |
+      Check whether the user's message contains personal data, abuse, threats,
+      hate, or requests that should not be sent to the model. Return yes/no.
+  - task: self_check_output
+    content: |
+      Check whether the assistant answer leaks personal data, is toxic, or makes
+      unsupported factual claims. Return yes/no.

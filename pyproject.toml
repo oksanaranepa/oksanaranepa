@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "advanced-guardrails-chatbot"
+version = "0.1.0"
+description = "Local chatbot prototype with toxicity, PII, and factuality guardrails."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+local-ml = [
+    "detoxify",
+    "nemo-guardrails",
+    "torch",
+    "transformers",
+]
+
+[project.scripts]
+guardrails-chatbot = "guardrails_chatbot.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
