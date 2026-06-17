@@ -1,0 +1,122 @@
+[
+  {
+    "question": "Какая максимальная сумма потребительского кредита?",
+    "expected_doc_id": "cash_loan_terms",
+    "expected_section": "Назначение и суммы",
+    "product_type": "loan"
+  },
+  {
+    "question": "На какой срок можно взять кредит Удобный?",
+    "expected_doc_id": "cash_loan_terms",
+    "expected_section": "Назначение и суммы",
+    "product_type": "loan"
+  },
+  {
+    "question": "Есть ли комиссия за выдачу потребительского кредита?",
+    "expected_doc_id": "cash_loan_terms",
+    "expected_section": "Процентная ставка и комиссии",
+    "product_type": "loan"
+  },
+  {
+    "question": "Можно ли досрочно погасить потребительский кредит без штрафа?",
+    "expected_doc_id": "cash_loan_terms",
+    "expected_section": "Погашение",
+    "product_type": "loan"
+  },
+  {
+    "question": "Какие документы нужны для заявки на кредит?",
+    "expected_doc_id": "cash_loan_terms",
+    "expected_section": "Документы",
+    "product_type": "loan"
+  },
+  {
+    "question": "Кто может оформить семейную ипотеку?",
+    "expected_doc_id": "family_mortgage",
+    "expected_section": "Условия программы",
+    "product_type": "mortgage"
+  },
+  {
+    "question": "Какой первоначальный взнос по семейной ипотеке?",
+    "expected_doc_id": "family_mortgage",
+    "expected_section": "Ставка и первоначальный взнос",
+    "product_type": "mortgage"
+  },
+  {
+    "question": "Какая ставка начинается по ипотеке Семейная?",
+    "expected_doc_id": "family_mortgage",
+    "expected_section": "Ставка и первоначальный взнос",
+    "product_type": "mortgage"
+  },
+  {
+    "question": "Какой возраст заемщика допускается по ипотеке?",
+    "expected_doc_id": "family_mortgage",
+    "expected_section": "Требования к заемщику",
+    "product_type": "mortgage"
+  },
+  {
+    "question": "Обязательно ли страховать недвижимость по ипотеке?",
+    "expected_doc_id": "family_mortgage",
+    "expected_section": "Страхование и досрочное погашение",
+    "product_type": "mortgage"
+  },
+  {
+    "question": "Какая минимальная сумма вклада Надежный?",
+    "expected_doc_id": "deposit_tariffs",
+    "expected_section": "Вклад «Надежный»",
+    "product_type": "deposit"
+  },
+  {
+    "question": "Можно ли пополнять вклад Доходный плюс?",
+    "expected_doc_id": "deposit_tariffs",
+    "expected_section": "Вклад «Доходный плюс»",
+    "product_type": "deposit"
+  },
+  {
+    "question": "Как выплачиваются проценты по депозитам?",
+    "expected_doc_id": "deposit_tariffs",
+    "expected_section": "Проценты и налоги",
+    "product_type": "deposit"
+  },
+  {
+    "question": "Застрахованы ли вклады физических лиц?",
+    "expected_doc_id": "deposit_tariffs",
+    "expected_section": "Страхование вкладов",
+    "product_type": "deposit"
+  },
+  {
+    "question": "Какая долговая нагрузка рекомендуется заемщику?",
+    "expected_doc_id": "borrower_requirements",
+    "expected_section": "Возраст и доход",
+    "product_type": "borrower"
+  },
+  {
+    "question": "Какие требования к гражданству заемщика?",
+    "expected_doc_id": "borrower_requirements",
+    "expected_section": "Гражданство и регистрация",
+    "product_type": "borrower"
+  },
+  {
+    "question": "Почему банк может отказать в кредите?",
+    "expected_doc_id": "borrower_requirements",
+    "expected_section": "Причины отказа",
+    "product_type": "borrower"
+  },
+  {
+    "question": "Где подать заявку на ипотеку или вклад?",
+    "expected_doc_id": "customer_faq",
+    "expected_section": "Как подать заявку",
+    "product_type": "faq"
+  },
+  {
+    "question": "Как узнать статус заявки?",
+    "expected_doc_id": "customer_faq",
+    "expected_section": "Как узнать решение",
+    "product_type": "faq"
+  },
+  {
+    "question": "Что будет с процентами при досрочном закрытии вклада?",
+    "expected_doc_id": "customer_faq",
+    "expected_section": "Закрытие вклада",
+    "product_type": "faq"
+  }
+]
